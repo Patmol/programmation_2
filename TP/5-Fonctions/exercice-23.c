@@ -10,9 +10,13 @@ int main() {
 }
 
 int factorielle(int n) {
+    return n == 0 ? 1 : n * factorielle(n - 1);
+    
+    /*
     if (n == 0) {
         return 1;
     }
 
     return n * factorielle(n - 1);
+    */
 }
