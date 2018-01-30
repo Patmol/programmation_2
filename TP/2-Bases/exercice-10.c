@@ -4,7 +4,7 @@
 int main(void) {
     float a, b, c, delta;
 
-    scanf("%d %d %d", &a, &b, &c);
+    scanf("%f %f %f", &a, &b, &c);
 
     delta = (b * b) - (4 * a * c);
 
