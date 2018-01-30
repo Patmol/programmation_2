@@ -11,7 +11,7 @@ int main(void) {
         somme += (1.0 / (pow(2, i)));
     }
 
-    printf("%f.2\n", somme);
+    printf("%f\n", somme);
 
     return 0;
 }
