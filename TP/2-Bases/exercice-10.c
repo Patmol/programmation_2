@@ -2,7 +2,7 @@
 #include <math.h>
 
 int main(void) {
-    int a, b, c, delta;
+    float a, b, c, delta;
 
     scanf("%d %d %d", &a, &b, &c);
 
