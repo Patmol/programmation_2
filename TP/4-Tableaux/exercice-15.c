@@ -4,7 +4,7 @@
 #define MAX_I 31
 
 int main(void) {
-    int tab[MAX_I];
+    int tab[MAX_I + 1];
 
     for(float i = 0; i <= MAX_I; i++) {
         tab[(int)i] = pow(2.0, i);
