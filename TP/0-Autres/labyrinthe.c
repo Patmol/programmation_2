@@ -24,7 +24,7 @@ void remplissage(char labyrinthe[TAILLE_LABY][TAILLE_LABY]) {
             } else if(i == TAILLE_LABY / 2 && j == TAILLE_LABY / 2) {
                 item = 'X';
             } else {
-                item = '*';
+                item = '.';
             }
 
             labyrinthe[i][j] = item;
