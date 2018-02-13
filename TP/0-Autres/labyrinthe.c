@@ -30,7 +30,7 @@ int main(void) {
     (*game).points = 0;
     (*game).fin = false;
 
-    printf("Les déplacements se font avec 'z', 's', 'q', 'd'\n");
+    printf("Les déplacements se font avec 'z', 'q', 's', 'd'\n");
     
     remplissage(game);
     affichage(game);
@@ -86,10 +86,10 @@ void affichage(Game *game) {
 
     for (int i = 0; i < TAILLE_LABY; i++) {
         for (int j = 0; j < TAILLE_LABY; j++) {
-            // Affichage des bonbons
             if ((*game).position.x == i && (*game).position.y == j) {
                 printf("x ");
             } else {
+                // Affichage des bonbons
                 for (int k = 0; k < NOMBRE_BONBONS && !affichageBonbon; k++) {
                     if ((*game).bonbons[k].x != 0 &&
                         (*game).bonbons[k].y != 0 && 
