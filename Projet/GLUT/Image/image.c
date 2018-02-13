@@ -42,6 +42,7 @@ GLuint loadTexture(char *fileName) {
 
     GLuint textureId;
     glGenTextures(1, &textureId);
+    glBindTexture(GL_TEXTURE_2D, 0);
     glBindTexture(GL_TEXTURE_2D, textureId);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, w, h, 0, GL_RGB, GL_UNSIGNED_BYTE, wa);
     free(wa);
@@ -74,16 +75,14 @@ void display() {
 
 int main(int argc, char **argv) {
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
-    glutInitWindowSize(500, 500);
+    glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);
+    glutInitWindowSize(256, 256);
     glutCreateWindow("Image");
 
     loadTexture("image.bmp");
 
     glClearColor(0.0, 0.0, 0.0, 0.0);
     glColor3f(1.0, 1.0, 1.0);
-    glShadeModel(GL_FLAT);
-    glEnable(GL_DEPTH_TEST);
     glEnable(GL_TEXTURE_2D);
 
     glutDisplayFunc(display);
