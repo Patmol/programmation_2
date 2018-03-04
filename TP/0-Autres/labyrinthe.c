@@ -44,9 +44,9 @@ int main(void) {
 
     } while (mouvement != 'x' && !(*game).fin);
 
-    free(game);
-
     printf("Fin du jeu avec %d points!\n", (*game).points);
+
+    free(game);
 
     return 0;
 }
