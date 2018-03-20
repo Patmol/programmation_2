@@ -64,6 +64,7 @@ void* supprimer(void * liste) {
         else {
             prevptr->nextptr = ptr->nextptr;
         }
+        free(ptr);
     }
 
     return liste;
